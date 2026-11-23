@@ -1,0 +1,39 @@
+{
+    "name": "intentic-e-urzad",
+    "version": "1.0.0",
+    "description": "e-Urząd: EZD RP cases and documents, e-Doręczenia deliveries and proofs, and electronic-signature verification for Polish public offices, as an agent CLI, per-card MCP tools and a rail view",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "packageManager": "pnpm@12.10.1",
+    "scripts": {
+        "build": "vite build && vite build --config vite.server.config.ts && vite build --config vite.cli.config.ts",
+        "typecheck": "vue-tsc --noEmit -p tsconfig.json && intentic-kit-check",
+        "test": "vitest run",
+        "verify": "pnpm run build && pnpm run typecheck && pnpm run test"
+    },
+    "dependencies": {
+        "@intentic/base": "^1.430.0",
+        "@intentic/extension-api": "^1.430.0",
+        "@intentic/extension-ui": "^1.430.0",
+        "@intentic/sandbox-contract": "^1.430.0",
+        "@xmldom/xmldom": "^0.9.12",
+        "asn1js": "^4.0.0",
+        "jose": "^6.2.13",
+        "pkijs": "^4.0.0",
+        "xadesjs": "^2.6.8",
+        "xmldsigjs": "^2.8.8",
+        "xpath": "^0.0.35",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@intentic/extension-manifest": "^1.430.0",
+        "@types/node": "^24.19.2",
+        "@vitejs/plugin-vue": "^6.0.10",
+        "typescript": "^6.0.3",
+        "vite": "^8.3.5",
+        "vitest": "^5.0.5",
+        "vue": "^3.5.44",
+        "vue-tsc": "^3.3.13"
+    }
+}

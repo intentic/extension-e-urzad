@@ -1,0 +1,26 @@
+/* Type-checks all of it: the view, the CLI, the backend and the suites. The bundles are built by vite.config.ts (dist/extension.js), vite.server.config.ts (dist/server.js) and vite.cli.config.ts (dist/cli.js). */
+{
+    "compilerOptions": {
+        "target": "ES2023",
+        "lib": ["ES2024", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "types": ["node", "vitest/globals"],
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": false,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "verbatimModuleSyntax": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.vue", "intentic-extension.json", "vite.config.ts", "vite.server.config.ts", "vite.cli.config.ts", "vitest.config.ts"]
+}
